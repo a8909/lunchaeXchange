@@ -1,0 +1,187 @@
+#ic {
+    font-size: 30px;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form-input {
+    border-radius: 8px;
+    border: 1px solid white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li a {
+    text-decoration: none;
+    padding: 16px;
+    background-color: whitesmoke;
+    color: black;
+}
+
+li {
+    float: left;
+}
+
+#fog {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+a:hover {
+    background-color: white;
+    color: grey;
+}
+
+.btn {
+    background-color: purple;
+    color: white;
+    height: fit-content;
+    width: fit-content;
+    padding: 16px;
+    border-radius: 0.3rem;
+    margin-top: 16px;
+    margin-left: 25px
+}
+
+.content>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#top-button {
+    display: none;
+}
+
+form label {
+    display: flex;
+    font-size: 15px;
+    padding-left: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        width: 30px;
+    }
+}
+
+#email {
+    margin-bottom: 0px;
+}
+
+#pwd {
+    margin-top: 3px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+}
+
+#log-in {
+    background-color: purple;
+    color: black;
+    height: 80%;
+    width: 30%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 30px;
+    padding-top: 0px;
+    border-radius: 10px;
+}
+
+.trading {
+    background-color: purple;
+    height: 30%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#trade-name,
+#trade-username,
+#trade-content {
+    margin-top: 50px;
+    color: rgb(255, 255, 255);
+}
+
+
+#trade-username {
+    font-size: 10px;
+    position: relative;
+    top: 7px;
+    /* left: -8rem; */
+
+}
+
+#trade-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+}
+
+#signupButton,
+#loginButton {
+    /* width: 100%; */
+    border-radius: 0.4rem;
+    background-color: rgb(255, 255, 255);
+    color: purple;
+    padding: 10px;
+    margin-top: 20px;
+    border-color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.sex {
+    display: flex;
+}
+
+.check-box {
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    cursor: pointer;
+}
+
+legend {
+    text-align: center;
+}
+
+fieldset {
+    border: none;
+    border-top: 1px solid black;
+}
+
+.check-box,
+.email,
+.gender,
+.male,
+.female,
+.terms-condition {
+    color: rgb(255, 255, 255);
+}
+
+#chat {
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+#chatPage {
+    padding-left: 300px;
+    padding-right: 300px;
+}

@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login-page</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="container-fluid" id="log-in">
+        <h1 style="text-align: center;padding-top:15px; color: #ffffff">Login</h1>
+        <form action="" autocomplete="on">
+            <label for="email" class="email"><strong>Email</strong></label>
+            <input type="email" placeholder="Email" required id="email"><br>
+            <label for="pwds"></label><strong style="padding-left: 8px;font-size:15px; color:#ffffff">Password</strong>
+            <input type="password" required placeholder="password" id="pwds" maxlength="8">
+            <button id="loginButton">Login</button>
+
+        </form>
+    </div>
+    <p style="color: black; text-align:center; font-size:small">
+        Don't have an account ?
+        <a href="signup.html" style="color: purple;background-color:transparent;text-decoration:none"
+            id="return-signIn">Signup</a>
+    </p>
+    <script src="exchange.js"></script>
+
+
+</body>
+
+</html>

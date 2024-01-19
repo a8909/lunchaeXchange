@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Signup</title>
+</head>
+
+<body>
+    <div class="container-fluid" id="log-in">
+        <h1 style="text-align: center;padding-top:15px; color: white">Sign up</h1>
+        <form action="">
+            <label for="email" class="email"><strong>Email</strong></label>
+            <input type="email" placeholder="Email" required id="email" class="form-input"><br>
+            <label for="pwd"></label><strong style="padding-left: 8px;font-size:15px;color:white">Password</strong>
+            <input type="password" required placeholder="password" id="pwd" maxlength="8" class="form-input">
+            <label for="pwd"></label><strong style="padding-left: 8px;font-size:15px; color:#ffffff">Password</strong>
+            <input type="password" required placeholder="Enter-password again" id="pwd" maxlength="8"
+                class="form-input"><br>
+            <label for="gender" class="gender"><strong>Gender</strong></label>
+            <div class="sex">
+                <label for="male" class="male">Male</label>
+                <input name="gender" type="radio" id="male" value="Male" style="cursor: pointer;">
+                <label for="female" class="female">Female</label>
+                <input name="gender" type="radio" id="female" value="Female" style="cursor: pointer;">
+
+            </div>
+            <p class="check-box">
+                <input type="checkbox" id="terms" style="height: 15px;width:15px" required>
+                <label for="terms" style="font-size: 14px;"> I agree to the terms and condition</label>
+            </p>
+            <p class="terms-condition">
+                Agreeying to the terms and condition applies that....
+            </p>
+            <button id="signupButton">Sign up</button>
+        </form>
+
+        <script src="exchange.js"></script>
+</body>
+
+</html>
