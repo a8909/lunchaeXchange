@@ -52,9 +52,7 @@ function submitButton(e) {
     e.preventDefault();
 }
 
-update.addEventListener("click", updateButton);
-createAccount.addEventListener("click", create);
-logIn.addEventListener("click", control);
+
 
 
 const tradingArrays = [{
@@ -82,14 +80,16 @@ const tradingArrays = [{
     // image: "image/bitcoin.png"
 }];
 
-
+const mailArray = ["boluwatifeshobola#gmail.com", "bols@gmail.com", "codes@gmail.com"]
 // JsonTrade = JSON.stringify(tradingArrays);
 // console.log(JsonTrade);   here json need to be parsed not stringify
 let tradingForms = {
     News: [...tradingArrays],
     reviews: null,
     requiredPasscode: "code",
-    gmail: "boluwatifeshobola@gmail.com"
+    gmail: "boluwatifeshobola@gmail.com",
+    mails: [...mailArray]
+
 };
 
 
@@ -101,10 +101,10 @@ const tradingUpdates = (trades) => {
     <li id= "trade-content">${tradeUpdates.content}</li>
     <img src=${tradeUpdates.image} alt="photos">`
     });
-    tradingNews.innerHTML = tradingHTML[0];
-    tradingNews_2.innerHTML = tradingHTML[1];
-    tradingNews_3.innerHTML = tradingHTML[2];
-    tradingNews_4.innerHTML = tradingHTML[3];
+    // tradingNews.innerHTML = tradingHTML[tradingUpdates];
+    // tradingNews_2.innerHTML = tradingHTML[1];
+    // tradingNews_3.innerHTML = tradingHTML[2];
+    // tradingNews_4.innerHTML = tradingHTML[3];
     console.log(tradingHTML);
 
 
@@ -138,4 +138,22 @@ const logs = () => {
 
 
 
-loginButton.addEventListener("click", logs);
+// loginButton.addEventListener("click", logs);
+
+
+class MyAuth {
+    constructor(email, passcode) {
+        this.email = email,
+            this.passcode = passcode
+
+    }
+    get passphrase() {
+        return this.passcode
+    }
+}
+
+const anotherAut = new MyAuth("bols@gmai.com", "5mith");
+console.log(anotherAut.passphrase);
+update.addEventListener("click", updateButton);
+createAccount.addEventListener("click", create);
+logIn.addEventListener("click", control);
