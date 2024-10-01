@@ -1,6 +1,6 @@
 const update = document.querySelector("#join");
 const createAccount = document.getElementById("create-account");
-const logIn = document.getElementById("login");
+const logIn = document.getElementById("login-button");
 const Home = document.getElementById("home");
 const Trading = document.getElementById("trading");
 const Review = document.getElementById("review");
@@ -12,14 +12,16 @@ const tradingNews_3 = document.getElementById("trade3");
 const tradingNews_4 = document.getElementById("trade4");
 const loginButton = document.getElementById("loginButton");
 const chatInput = document.getElementById("chatPage");
-const suppliedPasscode = document.getElementById("pwds");
-const mailAddress = document.getElementById("email");
+const password = document.getElementById("pwds");
+const email = document.getElementById("email");
+const errorMessage = document.querySelector('.error-message');
 const target = "_blank";
 const ButtonsNavigator = {
     button1: "https://wa.me/c/2349090397455",
     button2: "signup.html",
     button3: "login.html"
 };
+logIn.addEventListener("click", control);
 
 function control() {
     const action = confirm("Make sure you partake in the BULL-RUN cashout coming up soon this december; with 100% guidline offered by LunchaeXchange....");
@@ -86,8 +88,8 @@ const mailArray = ["boluwatifeshobola#gmail.com", "bols@gmail.com", "codes@gmail
 let tradingForms = {
     News: [...tradingArrays],
     reviews: null,
-    requiredPasscode: "code",
-    gmail: "boluwatifeshobola@gmail.com",
+    requiredPasscode: "luncha",
+    gmail: "luncha@gmail.com",
     mails: [...mailArray]
 
 };
@@ -109,36 +111,38 @@ const tradingUpdates = (trades) => {
 
 
 };
-
+isLoggedin = false;
 tradingUpdates(tradingForms?.News);
 
-const logs = () => {
-    const check = suppliedPasscode.value;
+const onLogin = () => {
+    const check = password.value;
     const checkMatch = tradingForms.requiredPasscode;
-    const address = mailAddress.value;
+    const address = email.value;
     const mailCheck = tradingForms.gmail;
-    supply = "Password verified"
+    supply = "checking..."
     request = "Invalid Password"
 
-    if (check === checkMatch && address === mailCheck) {
-        supply = "Password verified"
-        console.log(supply);
+    if (check == checkMatch && address == mailCheck ) {
+        isLoggedin = true;
+        if(isLoggedin){
+            loginButton.innerText = supply;
+        }
         loginButton.onclick = Window("https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/learn-basic-string-and-array-methods-by-building-a-music-player/step-28", target)
-        return true;
+        isLoggedin = false
     } else {
-        request = "Invalid Password"
-        console.log(request);
-        function authenticator(event) { event.preventDefault(); }
+        function authenticator(event) { 
+            console.log(errorMessage);
+            event.preventDefault(); }
         loginButton.addEventListener("submit", authenticator);
         return false;
     };
-
-
 };
 
+loginButton.addEventListener("click", onLogin);
 
 
-// loginButton.addEventListener("click", logs);
+
+
 
 
 class MyAuth {
@@ -156,4 +160,4 @@ const anotherAut = new MyAuth("bols@gmai.com", "5mith");
 console.log(anotherAut.passphrase);
 update.addEventListener("click", updateButton);
 createAccount.addEventListener("click", create);
-logIn.addEventListener("click", control);
+

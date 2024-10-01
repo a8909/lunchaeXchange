@@ -12,22 +12,28 @@
   <body>
     <header>
       <div class="container-fluid" id="fog">
-        <img
-          src="image/exchange.png"
-          alt="luncha"
-          style="height: 150; width: 150"
-        />
-        <nav style="margin-top: 16px">
-          <ul>
-            <li id="home"><a href="#fog"> Home</a></li>
-            <li id="trading"><a href="trading-news.html">Trading News</a></li>
-            <li id="review"><a href="#review">Trading Revews</a></li>
-            <li id="more"><a href="#address-details">About us</a></li>
-          </ul>
-        </nav>
-        <button type="submit" class="btn" id="top-button">
+        <div class="icon-image">
+          <span
+            ><img
+              src="image/exchange.png"
+              alt="luncha"
+              style="height: 150; width: 150"
+          /></span>
+        </div>
+        <div class="navbar">
+          <nav>
+            <ul>
+              <li id="home"><a href="#fog"> Home</a></li>
+              <li id="trading"><a href="trading-news.html">Trading News</a></li>
+              <li id="review"><a href="#review">Trading Revews</a></li>
+              <li id="more"><a href="#address-details">About us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- <button type="submit" class="btn" id="top-button">
           <a href="" target="_blank">Sign in</a>
-        </button>
+        </button> -->
       </div>
     </header>
     <section>
@@ -69,41 +75,14 @@
         Join Now
       </button>
     </article>
-    <button
-      type="button"
-      id="create-account"
-      style="
-        background-color: purple;
-        padding: 16px;
-        margin-left: 50px;
-        color: whitesmoke;
-        border-radius: 0.3rem;
-        cursor: pointer;
-        font-size: large;
-        text-decoration: none;
-      "
-    >
-      create account
-    </button>
+    <div class="account-btns">
+      <button type="button" id="create-account">create account</button>
 
-    <!-- <a href="login.html" onclick="info()" style="text-decoration: none;"> -->
-    <button
-      type="button"
-      id="login"
-      style="
-        background-color: white;
-        padding: 16px;
-        margin-left: 20px;
-        color: purple;
-        border-radius: 0.3rem;
-        cursor: pointer;
-        font-size: large;
-        text-decoration: none;
-      "
-    >
-      Log in
-    </button>
-    <!-- </a> -->
+      <!-- <a href="login.html" onclick="info()" style="text-decoration: none;"> -->
+      <!-- </a> -->
+      <button type="button" id="login-button">Log in</button>
+    </div>
+
     <article>
       <div id="address-details" style="margin-left: 50px">
         <h2>Contact:</h2>

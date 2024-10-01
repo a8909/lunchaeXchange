@@ -4,6 +4,8 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .form-input {
@@ -11,8 +13,11 @@ body {
     border: 1px solid white;
 }
 
+
 ul {
     list-style-type: none;
+    padding-right: 10px;
+    display: flex;
 }
 
 li a {
@@ -21,15 +26,23 @@ li a {
     background-color: whitesmoke;
     color: black;
 }
-
-li {
-    float: left;
+header{
+    position: sticky;
+    z-index: 2000;
+    top: 0;
 }
 
 #fog {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-direction: row;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+   
 }
 
 a:hover {
@@ -204,4 +217,35 @@ fieldset {
 #chatPage {
     padding-left: 300px;
     padding-right: 300px;
+}
+
+#create-account{
+    background-color: purple;
+    color: whitesmoke;
+    border: purple;
+    
+}
+#create-account,
+#login-button{
+    transition: all 3s ease-in-out;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: 600;
+    padding: 16px;
+
+}
+.account-btns{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 20px;
+}
+#create-account, #login-button:hover{
+    font-size: large;
+    font-weight: bolder;
+}
+#login-button{
+    background-color: white;
+    color: purple;
 }
